@@ -22,7 +22,7 @@ class LocalVideoModel{
     videoUrl:   json['videoUrl'],
     likes:      json['likes']     ?? '0',
     views:      json['views']     ?? '0'
-
+    
   );
 
   // Mapper

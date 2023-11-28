@@ -10,13 +10,20 @@ class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
   @override
+  
   Widget build(BuildContext context) {
     return MultiProvider(
 
       // lista de providers
       providers: [
 
-        ChangeNotifierProvider(create: (_) => DiscoverProvider(),)
+        ChangeNotifierProvider(
+          // operador lazy
+          lazy: false,
+
+          // loadNextPage operador de cascada
+          create: (_) => DiscoverProvider()..loadNextPage() 
+        ),
 
       ],
 
